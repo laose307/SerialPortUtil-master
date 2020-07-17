@@ -1,0 +1,14 @@
+android.serialport
+android.support.compat
+android.support.coreui
+android.support.coreutils
+android.support.fragment
+android.support.graphics.drawable
+android.support.graphics.drawable.animated
+android.support.mediacompat
+android.support.v4
+android.support.v7.appcompat
+com.example.serialportlibrary
+com.serialportlibrary.service
+com.serialportlibrary.service.impl
+com.serialportlibrary.util

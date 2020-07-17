@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.dhht.serialportutil.SerialPortMainActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2">
+
+       <ScrollView
+           android:layout_weight="1.2"
+           android:layout_width="0dp"
+           android:layout_height="match_parent">
+           <LinearLayout
+               android:orientation="vertical"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               >
+               <TextView
+                   android:text="--串口参数----------"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+
+               <!--            tty路径-->
+               <LinearLayout
+                   android:gravity="center|left"
+                   android:orientation="horizontal"
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/itemwidth">
+                   <TextView
+                       android:text="路径："
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"/>
+                   <Spinner
+                       android:id="@+id/spinner_tty"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"/>
+               </LinearLayout>
+
+               <!--            波特率-->
+               <LinearLayout
+                   android:layout_marginTop="3dp"
+                   android:gravity="center|left"
+                   android:orientation="horizontal"
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/itemwidth">
+                   <TextView
+                       android:text="波特率："
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"/>
+                   <Spinner
+                       android:id="@+id/spinner_baud"
+                       android:layout_gravity="center"
+                       android:gravity="center"
+                       android:entries="@array/baudrate"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"/>
+               </LinearLayout>
+
+               <!--            超时-->
+               <LinearLayout
+                   android:layout_marginTop="3dp"
+                   android:gravity="center|left"
+                   android:orientation="horizontal"
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/itemwidth">
+                   <TextView
+                       android:text="超时："
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"/>
+                   <Spinner
+                       android:id="@+id/spinner_timeout"
+                       android:layout_gravity="center"
+                       android:gravity="center"
+                       android:entries="@array/timeout"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"/>
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_marginTop="3dp"
+                   android:gravity="center|left"
+                   android:orientation="horizontal"
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/itemwidth">
+                   <TextView
+                       android:text="过滤重复数据："
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"/>
+                   <ToggleButton
+                       android:id="@+id/spinner_shakefilter"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textOn=" 关闭过滤重复数据"
+                       android:textOff="启动过滤重复数据">
+                   </ToggleButton>
+               </LinearLayout>
+
+
+
+               <ToggleButton
+                   android:id="@+id/toggle_open_close"
+                   android:layout_gravity="center"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textOn="关闭串口"
+                   android:textOff="打开串口">
+               </ToggleButton>
+
+           </LinearLayout>
+       </ScrollView>
+        <View
+            android:background="@android:color/darker_gray"
+            android:layout_width="3dp"
+            android:layout_height="match_parent"/>
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+               >
+                <TextView
+                    android:text="--接收数据----------"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/serial_result"
+                    android:text=""
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+        </ScrollView>
+        <View
+            android:background="@android:color/darker_gray"
+            android:layout_width="3dp"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:gravity="center|left|top"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+           <TextView
+               android:text="--接收类型----------"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+            <RadioGroup
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <RadioButton
+                    android:id="@+id/radio_receivehex"
+                    android:text="接收16进制"
+                    android:checked="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <RadioButton
+                    android:id="@+id/radio_receiveascll"
+                    android:layout_marginTop="3dp"
+                    android:text="接收ASCLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <RadioButton
+                    android:id="@+id/radio_receivetext"
+                    android:layout_marginTop="3dp"
+                    android:text="接收10进制"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RadioGroup>
+
+            <Button
+                android:onClick="clean"
+                android:layout_marginTop="3dp"
+                android:text="清空输出"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></Button>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <View
+        android:background="@android:color/holo_orange_dark"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2">
+            <TextView
+                android:text="--收藏命令----------"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ListView
+                android:id="@+id/list_collect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></ListView>
+        </LinearLayout>
+
+        <View
+            android:background="@android:color/darker_gray"
+            android:layout_width="3dp"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="--发送命令---------作者:laose-----------"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:layout_marginTop="3dp"
+                android:text="5A5A0001000A00000b"
+                android:id="@+id/edit_cmd"
+                android:background="@android:drawable/edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:onClick="cmdColle"
+                    android:text="命令收藏"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:onClick="sendCmd"
+                    android:layout_marginLeft="30dp"
+                    android:text="发送"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <View
+            android:background="@android:color/darker_gray"
+            android:layout_width="3dp"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                android:text="--发送类型----------"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <RadioGroup
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <RadioButton
+                    android:id="@+id/radio_sendhex"
+                    android:text="发送16进制"
+                    android:checked="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <RadioButton
+                    android:id="@+id/radio_sendascll"
+                    android:layout_marginTop="3dp"
+                    android:text="发送ASCLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <RadioButton
+                    android:id="@+id/radio_sendtext"
+                    android:layout_marginTop="3dp"
+                    android:text="发送10进制"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
