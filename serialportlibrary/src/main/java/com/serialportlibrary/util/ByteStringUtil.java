@@ -23,8 +23,54 @@ public class ByteStringUtil {
         return sb.toString();
     }
 
+    public static int bytesToInt2(byte[] src, int offset) {
+        int value;
+        value = (int) ( ((src[offset] & 0xFF)<<24)
+                |((src[offset+1] & 0xFF)<<16)
+                |((src[offset+2] & 0xFF)<<8)
+                |(src[offset+3]  & 0xFF));
+        return value;
+    }
+    public static byte[] intToByteArray(int value){
+        byte[] byteArray = new byte[4];
+        byteArray[0] = (byte) (value & 0xFF);
+        byteArray[1] = (byte) (value & 0xFF00);
+        byteArray[2] = (byte) (value & 0xFF0000);
+        byteArray[3] = (byte) (value & 0xFF000000);
+        return byteArray;
+    }
 
+    public static byte[] intToBytes2(int n){
+        byte[] b = new byte[4];
+        for(int i = 0;i < 4;i++){
+            b[i] = (byte)(n >> (24 - i * 8));
+        }
+        return b;
+    }
 
+    /**
+     * 将byte数组转换为int数据
+     * @param b 字节数组
+     * @return 生成的int数据
+     */
+    public static int byteToInt2(byte[] b){
+        return (((int)b[0]) << 24) + (((int)b[1]) << 16) + (((int)b[2]) << 8) + b[3];
+    }
+
+    public static byte[] int2bytes(int n) {
+
+        int temp1 = 0, temp2 = 0;
+        byte[] hex = new byte[2];
+        if (n < 256) {
+            hex[1] = (byte) n;
+        } else {
+            temp1 = n & 0xff;
+            hex[1] = (byte) temp1;
+            temp2 = n >> 8;
+            hex[0] = (byte) temp2;
+        }
+        return hex;
+    }
 
     /**
      * 10进制转ASCII
@@ -41,7 +87,19 @@ public class ByteStringUtil {
     }
 
 
+    /**
+     *
+     * @param data1
+     * @param data2
+     * @return data1 与 data2拼接的结果
+     */
+    public static byte[] addBytes(byte[] data1, byte[] data2) {
+        byte[] data3 = new byte[data1.length + data2.length];
+        System.arraycopy(data1, 0, data3, 0, data1.length);
+        System.arraycopy(data2, 0, data3, data1.length, data2.length);
+        return data3;
 
+    }
 
     public static byte[] hexStrToByteArray(String str) {
         if (str == null) {

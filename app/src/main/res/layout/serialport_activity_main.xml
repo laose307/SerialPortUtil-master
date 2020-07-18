@@ -307,9 +307,22 @@
                     android:layout_height="wrap_content"/>
 
                 <RadioButton
-                    android:id="@+id/radio_sendtext"
+                    android:id="@+id/radio_send10"
                     android:layout_marginTop="3dp"
                     android:text="发送10进制"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <RadioButton
+                    android:id="@+id/radio_sendtextgbk"
+                    android:layout_marginTop="3dp"
+                    android:text="发送文本GBK"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <RadioButton
+                    android:id="@+id/radio_sendtextutf"
+                    android:layout_marginTop="3dp"
+                    android:text="发送文本utf-8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </RadioGroup>

@@ -152,7 +152,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .createService();
         serialPortService.isOutputLog(true);
 //发送开门指令
-        byte[] receiveData = serialPortService.sendData(cmd);
+        byte[] receiveData = serialPortService.sendDataHex(cmd);
 
         if(receiveData!=null){
             Log.e("MainActivity：", ByteStringUtil.byteArrayToHexStr(receiveData));
