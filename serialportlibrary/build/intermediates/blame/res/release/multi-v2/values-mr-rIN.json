@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Administrator\\Downloads\\SerialPortUtil-master\\serialportlibrary\\build\\intermediates\\res\\merged\\release\\values-mr-rIN\\values-mr-rIN.xml",
+            "outputFile": "D:\\android_code\\person_dev\\library\\SerialPortUtil-master\\serialportlibrary\\build\\intermediates\\res\\merged\\release\\values-mr-rIN\\values-mr-rIN.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.0.aar\\d9bc24e6455bfffbaec15ebe16e9ac66\\res\\values-mr-rIN\\values-mr-rIN.xml",
@@ -16,7 +16,7 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\Administrator\\Downloads\\SerialPortUtil-master\\serialportlibrary\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-mr-rIN\\values-mr-rIN.xml",
+            "outputFile": "D:\\android_code\\person_dev\\library\\SerialPortUtil-master\\serialportlibrary\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-mr-rIN\\values-mr-rIN.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.0.aar\\d9bc24e6455bfffbaec15ebe16e9ac66\\res\\values-mr-rIN\\values-mr-rIN.xml",

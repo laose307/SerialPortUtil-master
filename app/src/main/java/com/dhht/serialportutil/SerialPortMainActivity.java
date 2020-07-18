@@ -182,6 +182,9 @@ public class SerialPortMainActivity extends AppCompatActivity {
                                 @Override
                                 public void onReceiveData(byte[] receiveData) {
 
+
+
+
                                     if (receiveData != null) {
                                         Log.e("MainActivity：", ByteStringUtil.byteArrayToHexStr(receiveData));
                                         String result = "";

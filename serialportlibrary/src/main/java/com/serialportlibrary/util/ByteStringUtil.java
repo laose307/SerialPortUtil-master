@@ -1,6 +1,7 @@
 package com.serialportlibrary.util;
 
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by Tyhj on 2017/3/10.
@@ -72,6 +73,30 @@ public class ByteStringUtil {
         return hex;
     }
 
+    /**
+     * 多个字节数字拼接
+     * @param list
+     * @return
+     */
+    public static byte[] byteConcat(List<byte[]> list) {
+
+        //先复制长度
+        int byteLength = 0;
+        for (byte[] mbyte : list) {
+            byteLength = byteLength + mbyte.length;
+        }
+        byte[] btResult = new byte[byteLength];
+
+        int len = 0;
+        for (int i = 0; i < list.size(); i++) {
+
+            if (i != 0) {
+                len += list.get(i - 1).length;
+            }
+            System.arraycopy(list.get(i), 0, btResult, len, list.get(i).length);
+        }
+        return btResult;
+    }
     /**
      * 10进制转ASCII
      * @param str 10进制

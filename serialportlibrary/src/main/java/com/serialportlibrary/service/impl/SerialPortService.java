@@ -179,7 +179,7 @@ public class SerialPortService implements ISerialPortService {
     @Override
     public byte[] sendDataHex(String date) {
         try {
-            return sendData(ByteStringUtil.hexStrToByteArray(date));
+            return sendData(ByteStringUtil.hexStrToByteArray(date.replaceAll("\\s*", "")));
         } catch (Exception e) {
             e.printStackTrace();
             return null;
@@ -189,7 +189,7 @@ public class SerialPortService implements ISerialPortService {
     @Override
     public byte[] sendDataAscll(String data) {
         try {
-            return sendData( ByteStringUtil.strToAscll(data).getBytes());
+            return sendData( ByteStringUtil.strToAscll(data.replaceAll("\\s*", "")).getBytes());
         } catch (Exception e) {
             e.printStackTrace();
             return null;
@@ -199,7 +199,7 @@ public class SerialPortService implements ISerialPortService {
     @Override
     public byte[] sendDataStrGBK(String data) {
         try {
-            return sendData(data.getBytes("GBK"));
+            return sendData(data.replaceAll("\\s*", "").getBytes("GBK"));
         } catch (Exception e) {
             e.printStackTrace();
             return null;
@@ -209,7 +209,7 @@ public class SerialPortService implements ISerialPortService {
     @Override
     public byte[] sendDataStrUTF(String data) {
         try {
-            return sendData(data.getBytes("UTF-8"));
+            return sendData(data.replaceAll("\\s*", "").getBytes("UTF-8"));
         } catch (Exception e) {
             e.printStackTrace();
             return null;

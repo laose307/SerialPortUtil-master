@@ -13,7 +13,7 @@
         errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
         quickfix="studio">
         <location
-            file="C:\Users\Administrator\Downloads\SerialPortUtil-master\serialportlibrary\build.gradle"
+            file="D:\android_code\person_dev\library\SerialPortUtil-master\serialportlibrary\build.gradle"
             line="91"
             column="5"/>
     </issue>
@@ -31,7 +31,7 @@
         errorLine1="        targetSdkVersion 25"
         errorLine2="        ~~~~~~~~~~~~~~~~~~~">
         <location
-            file="C:\Users\Administrator\Downloads\SerialPortUtil-master\serialportlibrary\build.gradle"
+            file="D:\android_code\person_dev\library\SerialPortUtil-master\serialportlibrary\build.gradle"
             line="35"
             column="9"/>
     </issue>
