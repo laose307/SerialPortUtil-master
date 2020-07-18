@@ -130,6 +130,7 @@ public class ByteStringUtil {
         if (str == null) {
             return null;
         }
+        str=str.replaceAll("\\s*", "");
         if (str.length() == 0) {
             return new byte[0];
         }
