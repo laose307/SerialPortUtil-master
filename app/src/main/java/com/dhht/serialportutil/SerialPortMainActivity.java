@@ -196,7 +196,7 @@ public class SerialPortMainActivity extends AppCompatActivity {
                                         else if (radio_receiveascll.isChecked()) {
                                             result = ByteStringUtil.hexAscll2Str(ByteStringUtil.byteArrayToHexStr(receiveData));
                                         } else if (radio_receivetext.isChecked()) {
-                                            result = ByteStringUtil.byteArrayToHexStr(receiveData);
+                                            result = new String(receiveData);
                                         }
 
                                         setResult(result);
