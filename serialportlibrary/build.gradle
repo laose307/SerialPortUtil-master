@@ -7,7 +7,7 @@ publish {
 //    repoName = 'android'
     groupId = 'com.laose'
     artifactId = 'serialport'
-    publishVersion = '0.0.4'
+    publishVersion = '0.0.6'
     uploadName = 'SerialPort'
     desc = 'android '
     website = 'https://gitee.com/soft_kcd/SerialPortUtil-master'

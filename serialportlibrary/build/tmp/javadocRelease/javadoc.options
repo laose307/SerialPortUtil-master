@@ -9,6 +9,8 @@
 -windowtitle 'serialportlibrary API'
 'D:\\android_code\\person_dev\\library\\SerialPortUtil-master\\serialportlibrary\\src\\main\\java\\android\\serialport\\SerialPort.java'
 'D:\\android_code\\person_dev\\library\\SerialPortUtil-master\\serialportlibrary\\src\\main\\java\\android\\serialport\\SerialPortFinder.java'
+'D:\\android_code\\person_dev\\library\\SerialPortUtil-master\\serialportlibrary\\src\\main\\java\\com\\serialportlibrary\\service\\impl\\SerialPortBlockBuilder.java'
+'D:\\android_code\\person_dev\\library\\SerialPortUtil-master\\serialportlibrary\\src\\main\\java\\com\\serialportlibrary\\service\\impl\\SerialPortBlockService.java'
 'D:\\android_code\\person_dev\\library\\SerialPortUtil-master\\serialportlibrary\\src\\main\\java\\com\\serialportlibrary\\service\\impl\\SerialPortBuilder.java'
 'D:\\android_code\\person_dev\\library\\SerialPortUtil-master\\serialportlibrary\\src\\main\\java\\com\\serialportlibrary\\service\\impl\\SerialPortService.java'
 'D:\\android_code\\person_dev\\library\\SerialPortUtil-master\\serialportlibrary\\src\\main\\java\\com\\serialportlibrary\\service\\ISerialPortService.java'

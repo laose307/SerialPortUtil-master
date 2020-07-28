@@ -240,7 +240,7 @@
 
             <EditText
                 android:layout_marginTop="3dp"
-                android:text="5A5A0001000A00000b"
+                android:text="3;868956044179863;1575121944;3;1;#"
                 android:id="@+id/edit_cmd"
                 android:background="@android:drawable/edit_text"
                 android:layout_width="match_parent"
