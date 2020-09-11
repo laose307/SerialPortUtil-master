@@ -141,7 +141,6 @@ public class SerialPortService implements ISerialPortService {
             int receiveLeanth = 0;
                 while (!stop&&mTimeOut==0?true:System.currentTimeMillis() - time < mTimeOut) {
                     if (inputStream == null) return;
-
                     try {
                         int   available = inputStream.available();
                         byte[] returnData;
@@ -161,7 +160,6 @@ public class SerialPortService implements ISerialPortService {
                                     mSerialPortListening.onReceiveData(returnData);
                                 }
                             }
-
                         } else {
                             receiveLeanth = available;
                         }
