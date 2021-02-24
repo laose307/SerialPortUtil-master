@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.laose</groupId>
   <artifactId>serialport</artifactId>
-  <version>0.0.6</version>
+  <version>0.0.7</version>
   <packaging>aar</packaging>
   <dependencies>
     <dependency>

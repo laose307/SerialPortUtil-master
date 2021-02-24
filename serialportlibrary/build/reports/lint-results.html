@@ -173,17 +173,17 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 1 error and 1 warning</span>
+      <span class="mdl-layout-title">Lint Report: 1 error and 2 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Tue Jul 28 19:53:49 CST 2020      </nav>
+Check performed at Sat Feb 20 17:08:17 CST 2021      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">Issue Types</span>
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="#overview"><i class="material-icons">dashboard</i>Overview</a>
-      <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (1)</a>
+      <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (2)</a>
       <a class="mdl-navigation__link" href="#ExpiredTargetSdkVersion"><i class="material-icons error-icon">error</i>TargetSdkVersion No Longer Supported (1)</a>
     </nav>
   </div>
@@ -200,7 +200,7 @@ Check performed at Tue Jul 28 19:53:49 CST 2020      </nav>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Correctness">Correctness</a>
 </td></tr>
 <tr>
-<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#GradleDependency">GradleDependency</a>: Obsolete Gradle Dependency</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Compliance">Compliance</a>
 </td></tr>
@@ -225,7 +225,7 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../build.gradle">../../build.gradle</a>:91</span>: <span class="message">A newer version of com.android.support:appcompat-v7 than 25.0.0 is available: 25.4.0</span><br /><pre class="errorlines">
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:91</span>: <span class="message">A newer version of com.android.support:appcompat-v7 than 25.0.0 is available: 25.3.1</span><br /><pre class="errorlines">
 <span class="lineno"> 88 </span>
 <span class="lineno"> 89 </span>dependencies {
 <span class="lineno"> 90 </span>    implementation fileTree(dir: <span class="string">'libs'</span>, include: [<span class="string">'*.jar'</span>])
@@ -233,6 +233,16 @@ Dismiss</button>            </div>
 <span class="lineno"> 92 </span>    testImplementation <span class="string">'junit:junit:4.12'</span>
 <span class="lineno"> 93 </span>    androidTestImplementation <span class="string">'com.android.support.test:runner:1.0.2'</span>
 <span class="lineno"> 94 </span>    androidTestImplementation <span class="string">'com.android.support.test.espresso:espresso-core:3.0.2'</span>
+</pre>
+
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:92</span>: <span class="message">A newer version of junit:junit than 4.12 is available: 4.13.1</span><br /><pre class="errorlines">
+<span class="lineno"> 89 </span>dependencies {
+<span class="lineno"> 90 </span>    implementation fileTree(dir: <span class="string">'libs'</span>, include: [<span class="string">'*.jar'</span>])
+<span class="lineno"> 91 </span>    implementation <span class="string">'com.android.support:appcompat-v7:25.0.0'</span>
+<span class="caretline"><span class="lineno"> 92 </span>    <span class="warning">testImplementation <span class="string">'junit:junit:4.12'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 93 </span>    androidTestImplementation <span class="string">'com.android.support.test:runner:1.0.2'</span>
+<span class="lineno"> 94 </span>    androidTestImplementation <span class="string">'com.android.support.test.espresso:espresso-core:3.0.2'</span>
+<span class="lineno"> 95 </span>}
 </pre>
 
 </div>

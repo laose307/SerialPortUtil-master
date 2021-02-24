@@ -6,6 +6,7 @@
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/dbflow-4.1.2.aar/3b074c42f3d23b9ed2c3336ce33a312a/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/dbflow-4.1.2.aar/3b074c42f3d23b9ed2c3336ce33a312a/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/dbflow-4.1.2.aar/3b074c42f3d23b9ed2c3336ce33a312a/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

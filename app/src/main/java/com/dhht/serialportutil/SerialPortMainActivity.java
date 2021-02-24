@@ -1,19 +1,13 @@
 package com.dhht.serialportutil;
 
-import android.app.ProgressDialog;
-import android.content.Context;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.serialport.SerialPortFinder;
 import android.support.annotation.MainThread;
-import android.support.annotation.UiThread;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -21,7 +15,6 @@ import android.widget.RadioButton;
 import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.dhht.serialportutil.db.DBTableHelper;
@@ -29,14 +22,12 @@ import com.dhht.serialportutil.db.SerialPortCmdData;
 import com.dhht.serialportutil.utils.ACache;
 import com.raizlabs.android.dbflow.config.FlowManager;
 import com.serialportlibrary.service.SerialPortListening;
-import com.serialportlibrary.service.impl.SerialPortBuilder;
-import com.serialportlibrary.service.impl.SerialPortService;
+import com.serialportlibrary.service.impl.SerialPortASyncBuilder;
+import com.serialportlibrary.service.impl.SerialPortASynService;
 import com.serialportlibrary.util.ByteStringUtil;
 
-import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 
@@ -160,7 +151,7 @@ public class SerialPortMainActivity extends AppCompatActivity {
      *
      * @param view
      */
-    SerialPortService serialPortService;
+    SerialPortASynService serialPortService;
 
     public void openClose() {
 
@@ -173,7 +164,7 @@ public class SerialPortMainActivity extends AppCompatActivity {
                     int baud = Integer.valueOf((getResources().getStringArray(R.array.baudrate)[spinner_baud.getSelectedItemPosition()]));
                     String tty = mItems[spinner_tty.getSelectedItemPosition()];
 
-                    serialPortService = new SerialPortBuilder()
+                    serialPortService = new SerialPortASyncBuilder()
                             .setTimeOut(getTimeOut())
                             .setShakeFliter(spinner_shakefilter.isChecked())
                             .setBaudrate(baud)

@@ -16,6 +16,8 @@
 
 package android.serialport;
 
+import android.util.Log;
+
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -84,6 +86,9 @@ public class SerialPortFinder {
             }
             while (itdriv.hasNext()) {
                 Driver driver = itdriv.next();
+                if( driver.getDevices()==null){
+                    return null;
+                }
                 Iterator<File> itdev = driver.getDevices().iterator();
                 while (itdev.hasNext()) {
                     String device = itdev.next().getAbsolutePath();
@@ -111,6 +116,12 @@ public class SerialPortFinder {
                 mDevices = new Vector<File>();
                 File dev = new File("/dev");
                 File[] files = dev.listFiles();
+
+                if(files==null){
+                    return null;
+                }
+                Log.d("log","files==null:"+(files==null));
+
                 int i;
                 for (i = 0; i < files.length; i++) {
                     if (files[i].getAbsolutePath().startsWith(mDeviceRoot)) {

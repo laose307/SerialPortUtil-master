@@ -15,13 +15,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-import com.serialportlibrary.service.impl.SerialPortBuilder;
-import com.serialportlibrary.service.impl.SerialPortService;
+import com.serialportlibrary.service.impl.SerialPortASyncBuilder;
+import com.serialportlibrary.service.impl.SerialPortASynService;
 import com.serialportlibrary.util.ByteStringUtil;
 
 import java.io.File;
-import java.io.IOException;
-import java.io.OutputStream;
 import java.util.Arrays;
 import java.util.List;
 
@@ -142,10 +140,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return Arrays.asList(mSerialPortFinder.getDevicesPaths());
     }
 
-    SerialPortService serialPortService;
+    SerialPortASynService serialPortService;
     public void setSerialPort(String cmd){
 
-         serialPortService = new SerialPortBuilder()
+         serialPortService = new SerialPortASyncBuilder()
                 .setTimeOut(1000000000L)
                 .setBaudrate(Integer.valueOf(tv_select_baud.getText().toString()))
                 .setDevicePath(tv_select_path.getText().toString())

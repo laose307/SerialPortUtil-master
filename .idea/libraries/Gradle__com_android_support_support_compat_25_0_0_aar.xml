@@ -7,12 +7,13 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-compat-25.0.0.aar/831545e91b45f64959bb8f5c848c8ca9/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-compat-25.0.0.aar/831545e91b45f64959bb8f5c848c8ca9/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-compat-25.0.0.aar/831545e91b45f64959bb8f5c848c8ca9/jars/libs/internal_impl-25.0.0.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-compat-25.0.0.aar/831545e91b45f64959bb8f5c848c8ca9/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://D:/soft/andorid_sdk/extras/android/m2repository/com/android/support/support-compat/25.0.0/support-compat-25.0.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../soft/andorid_sdk/extras/android/m2repository/com/android/support/support-compat/25.0.0/support-compat-25.0.0-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://D:/soft/andorid_sdk/extras/android/m2repository/com/android/support/support-compat/25.0.0/support-compat-25.0.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../soft/andorid_sdk/extras/android/m2repository/com/android/support/support-compat/25.0.0/support-compat-25.0.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
